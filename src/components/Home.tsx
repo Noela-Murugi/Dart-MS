@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { selectDarts } from "../features/Dart/dartSlice";
-import Section from "./Section";
+import Unit from "./Unit";
 
 interface HomeInterface {
    homeRef: React.RefObject<HTMLDivElement>;
@@ -14,7 +14,7 @@ function Home(props: HomeInterface) {
    return (
       <Container ref={homeRef}>
          {darts.map((dart) => (
-            <Section
+            <Unit
                homeRef={homeRef}
                key={dart.id}
                id={dart.id}
